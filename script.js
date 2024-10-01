@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resetButton = document.getElementById("reset-button");
     let currentPlayer = "red";
 
-    // Initialize board
+   
     for (let row = 0; row < rows; row++) {
         board[row] = [];
         for (let col = 0; col < cols; col++) {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Handle cell click
+   
     function handleCellClick(event) {
         const col = event.target.dataset.col;
         for (let row = rows - 1; row >= 0; row--) {
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Check for winner
+    
     function checkWinner(row, col) {
         return (
             checkDirection(row, col, 1, 0) ||
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
-    // Check direction
+    
     function checkDirection(row, col, rowDir, colDir) {
         let count = 0;
         let r = row;
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return count >= 4;
     }
 
-    // Reset game
+   
     resetButton.addEventListener("click", () => {
         board.forEach(row => row.fill(null));
         document.querySelectorAll(".cell").forEach(cell => cell.className = "cell");
