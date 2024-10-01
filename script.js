@@ -80,6 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
         gameBoard.classList.remove("disabled");
     });
 
-    // Initial message
+   
     message.textContent = `Current Player: ${currentPlayer.toUpperCase()}`;
 });
